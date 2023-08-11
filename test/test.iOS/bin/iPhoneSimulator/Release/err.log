@@ -1,0 +1,30 @@
+objc[4718]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7ff86423bf08) and /Users/mac/Library/Developer/CoreSimulator/Devices/7F4C5489-1B48-4C9F-AC73-1BDA31761EB6/data/Containers/Bundle/Application/5012EF5F-AD5E-41BC-9492-E4D6B01B9A3B/test.iOS.app/test.iOS (0x10b633fc0). One of the two will be used. Which one is undefined.
+MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
+2023-08-02 09:10:22.569099+0700 test.iOS[4718:52100] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=4718
+2023-08-02 09:10:22.569460+0700 test.iOS[4718:52100] SecTaskCopyDebugDescription: test.iOS[4718]/0#-1 LF=0
+2023-08-02 09:10:22.590271+0700 test.iOS[4718:52100] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=4718
+2023-08-02 09:10:22.590607+0700 test.iOS[4718:52100] SecTaskCopyDebugDescription: test.iOS[4718]/0#-1 LF=0
+2023-08-02 09:10:22.694668+0700 test.iOS[4718:52407] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=4718
+2023-08-02 09:10:22.694969+0700 test.iOS[4718:52407] SecTaskCopyDebugDescription: test.iOS[4718]/0#-1 LF=0
+2023-08-02 09:10:27.347838+0700 test.iOS[4718:52100] 
+Unhandled Exception:
+System.NullReferenceException: Object reference not set to an instance of an object
+  at test.MainPage.onClick () [0x00006] in <d21332e85f844b5c8cff656379f26640>:0 
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore+<>c.<ThrowAsync>b__7_0 (System.Object state) [0x00000] in <aae03b95719e488f8a163bae4d2b5dcb>:0 
+  at Foundation.NSAsyncSynchronizationContextDispatcher.Apply () [0x00000] in <e76ce71449ac4d1485f78dd27d27dab7>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at (wrapper managed-to-native) UIKit.UIApplication.xamarin_UIApplicationMain(int,intptr,intptr,intptr,intptr&)
+  at UIKit.UIApplication.UIApplicationMain (System.Int32 argc, System.String[] argv, System.IntPtr principalClassName, System.IntPtr delegateClassName) [0x00008] in <e76ce71449ac4d1485f78dd27d27dab7>:0 
+  at UIKit.UIApplication.Main (System.String[] args, System.Type principalClass, System.Type delegateClass) [0x00041] in <e76ce71449ac4d1485f78dd27d27dab7>:0 
+  at test.iOS.Application.Main (System.String[] args) [0x00000] in <b5bca34d4a19465ca056a0f78e76f953>:0
+2023-08-02 09:10:27.349265+0700 test.iOS[4718:52100] Unhandled managed exception: Object reference not set to an instance of an object (System.NullReferenceException)
+  at test.MainPage.onClick () [0x00006] in <d21332e85f844b5c8cff656379f26640>:0 
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore+<>c.<ThrowAsync>b__7_0 (System.Object state) [0x00000] in <aae03b95719e488f8a163bae4d2b5dcb>:0 
+  at Foundation.NSAsyncSynchronizationContextDispatcher.Apply () [0x00000] in <e76ce71449ac4d1485f78dd27d27dab7>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at (wrapper managed-to-native) UIKit.UIApplication.xamarin_UIApplicationMain(int,intptr,intptr,intptr,intptr&)
+  at UIKit.UIApplication.UIApplicationMain (System.Int32 argc, System.String[] argv, System.IntPtr principalClassName, System.IntPtr delegateClassName) [0x00008] in <e76ce71449ac4d1485f78dd27d27dab7>:0 
+  at UIKit.UIApplication.Main (System.String[] args, System.Type principalClass, System.Type delegateClass) [0x00041] in <e76ce71449ac4d1485f78dd27d27dab7>:0 
+  at test.iOS.Application.Main (System.String[] args) [0x00000] in <b5bca34d4a19465ca056a0f78e76f953>:0
