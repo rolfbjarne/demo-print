@@ -25,7 +25,9 @@ namespace test.iOS
        public  void SelectPrinter()
        {
             UIPrintInteractionController printController = UIPrintInteractionController.SharedPrintController;
-
+            var template = new htm_printer() { };
+            var htmlString = template.GenerateString();
+            Console.WriteLine (htmlString);
 
             var controller = UIPrintInteractionController.SharedPrintController;
 
@@ -34,7 +36,14 @@ namespace test.iOS
             printInfo.OutputType = UIPrintInfoOutputType.General;
 
             controller.PrintInfo = printInfo;
-            controller.PrintPageRenderer = new GuestPrintPageRenderer();
+            var formatter = new UIMarkupTextPrintFormatter (htmlString);
+            formatter.PerPageContentInsets = UIEdgeInsets.Zero;
+
+            var renderer = new UIPrintPageRenderer ();
+            renderer.AddPrintFormatter (formatter, 0);
+            renderer.DrawPage (0, new CGRect (0, 0, 172, 172));
+
+            controller.PrintPageRenderer = renderer;
             controller.ShowsPaperSelectionForLoadedPapers = true;
             controller.ShowsPageRange = true;
 
