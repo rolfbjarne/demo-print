@@ -5,17 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using UIKit;
-using Foundation;
-using CarPlay;
 using test.Services;
 
 namespace test
 {
     public partial class MainPage : ContentPage
     {
-        private UIPrintInteractionController _printInteractionController;
-
         public MainPage()
         {
             InitializeComponent();
@@ -23,11 +18,6 @@ namespace test
 
         }
         int count = 0;
-
-        private UIPrintPageRenderer GetUIPrintPageRenderer()
-        {
-            return new UIPrintPageRenderer();
-        }
 
         void Button_Clicked(object sender, System.EventArgs e)
         {

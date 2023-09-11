@@ -16,9 +16,6 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Xamarin.iOS">
-      <HintPath>..\..\..\..\..\..\Library\Frameworks\Xamarin.iOS.framework\Versions\16.4.0.6\lib\mono\Xamarin.iOS\Xamarin.iOS.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Remove="Services\" />
